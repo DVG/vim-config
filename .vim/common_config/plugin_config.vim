@@ -2,34 +2,35 @@
 " install plugins.
 
 " Plugins requiring no additional configuration or keymaps
-  Bundle "git://github.com/oscarh/vimerl.git"
-  Bundle "git://github.com/tpope/vim-git.git"
-  Bundle "git://github.com/harleypig/vcscommand.vim.git"
-  Bundle "git://github.com/altercation/vim-colors-solarized.git"
-  Bundle "git://github.com/tpope/vim-cucumber.git"
-  Bundle "git://github.com/tpope/vim-endwise.git"
-  Bundle "git://github.com/tpope/vim-fugitive.git"
-  Bundle "git://github.com/tpope/vim-haml.git"
-  Bundle "git://github.com/pangloss/vim-javascript.git"
-  Bundle "git://github.com/vim-scripts/L9.git"
-  Bundle "git://github.com/tpope/vim-rake.git"
-  Bundle "git://github.com/vim-ruby/vim-ruby.git"
-  Bundle "git://github.com/ervandew/supertab.git"
-  Bundle "git://github.com/tomtom/tcomment_vim.git"
-  Bundle "git://github.com/michaeljsmith/vim-indent-object.git"
-  Bundle "git://github.com/tsaleh/vim-matchit.git"
-  Bundle "git://github.com/kana/vim-textobj-user.git"
-  Bundle "git://github.com/nelstrom/vim-textobj-rubyblock.git"
-  Bundle "git://github.com/tpope/vim-repeat.git"
-  Bundle "git://github.com/vim-scripts/ruby-matchit.git"
-  Bundle "git://github.com/wgibbs/vim-irblack.git"
-  Bundle "git://github.com/wavded/vim-stylus.git"
-  " Bundle git://github.com/skammer/vim-css-color.git
+  Bundle "http://github.com/oscarh/vimerl.git"
+  Bundle "http://github.com/tpope/vim-git.git"
+  Bundle "http://github.com/harleypig/vcscommand.vim.git"
+  Bundle "http://github.com/altercation/vim-colors-solarized.git"
+  Bundle "http://github.com/tpope/vim-cucumber.git"
+  Bundle "http://github.com/tpope/vim-endwise.git"
+  Bundle "http://github.com/tpope/vim-fugitive.git"
+  Bundle "http://github.com/tpope/vim-haml.git"
+  Bundle "http://github.com/pangloss/vim-javascript.git"
+  Bundle "http://github.com/vim-scripts/L9.git"
+  Bundle "http://github.com/tpope/vim-rake.git"
+  Bundle "http://github.com/vim-ruby/vim-ruby.git"
+  Bundle "http://github.com/ervandew/supertab.git"
+  Bundle "http://github.com/tomtom/tcomment_vim.git"
+  Bundle "http://github.com/michaeljsmith/vim-indent-object.git"
+  Bundle "http://github.com/tsaleh/vim-matchit.git"
+  Bundle "http://github.com/kana/vim-textobj-user.git"
+  Bundle "http://github.com/nelstrom/vim-textobj-rubyblock.git"
+  Bundle "http://github.com/tpope/vim-repeat.git"
+  Bundle "http://github.com/vim-scripts/ruby-matchit.git"
+  Bundle "http://github.com/wgibbs/vim-irblack.git"
+  Bundle "http://github.com/wavded/vim-stylus.git"
+  " Bundle http://github.com/skammer/vim-css-color.git
   " Use Aaron Baker's Fork to add SASS/SCSS color highlighting
-  Bundle "git@github.com:bakis2011/vim-css-color.git"
+  Bundle "http://github.com:bakis2011/vim-css-color.git"
+  Bundle 'chriskempson/base16-vim'
 
 " CtrlP - with FuzzyFinder compatible keymaps
-  Bundle "git://github.com/kien/ctrlp.vim.git"
+  Bundle "http://github.com/kien/ctrlp.vim.git"
     nnoremap <Leader>b :<C-U>CtrlPBuffer<CR>
     nnoremap <Leader>t :<C-U>CtrlP<CR>
     nnoremap <Leader>T :<C-U>CtrlPTag<CR>
@@ -43,38 +44,38 @@
     let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
 
 " Compile and deploy Arduino (*.pde) sketches directly from Vim
-  Bundle "git://github.com/smerrill/vim-arduino.git"
+  Bundle "http://github.com/smerrill/vim-arduino.git"
     au BufNewFile,BufRead *.pde set filetype=arduino
     au BufNewFile,BufRead *.ino set filetype=arduino
 
 " Mustache
-  Bundle "git://github.com/juvenn/mustache.vim.git"
+  Bundle "http://github.com/juvenn/mustache.vim.git"
     " Copied from the plugin; not sure why it isn't working normally
     au BufNewFile,BufRead *.mustache,*.handlebars,*.hbs set filetype=mustache
 
 " Slim
-  Bundle "git://github.com/slim-template/vim-slim.git"
+  Bundle "http://github.com/slim-template/vim-slim.git"
     au BufNewFile,BufRead *.slim set filetype=slim
 
 " Less
-  Bundle "git://github.com/groenewege/vim-less.git"
+  Bundle "http://github.com/groenewege/vim-less.git"
     au BufNewFile,BufRead *.less set filetype=less
 
 " Handlebars
-  Bundle "git://github.com/nono/vim-handlebars.git"
+  Bundle "http://github.com/nono/vim-handlebars.git"
     au BufNewFile,BufRead *.hbs set filetype=handlebars
 
 " Stylus
-  Bundle "git://github.com/wavded/vim-stylus.git"
+  Bundle "http://github.com/wavded/vim-stylus.git"
     au BufNewFile,BufRead *.styl set filetype=stylus
 
 " Coffee script
-  Bundle "git://github.com/kchmck/vim-coffee-script.git"
+  Bundle "http://github.com/kchmck/vim-coffee-script.git"
     au BufNewFile,BufRead *.coffee set filetype=coffee
 
 
 " ACK
-" Bundle "git://github.com/mileszs/ack.vim.git"
+" Bundle "http://github.com/mileszs/ack.vim.git"
 "   nmap g/ :Ack!<space>
 "   nmap g* :Ack! -w <C-R><C-W><space>
 "   nmap ga :AckAdd!<space>
@@ -84,7 +85,7 @@
 "   nmap gl :cwindow<CR>
 
 " AG aka The Silver Searcher
-  Bundle 'git://github.com/rking/ag.vim.git'
+  Bundle 'http://github.com/rking/ag.vim.git'
     nmap g/ :Ag!<space>
     nmap g* :Ag! -w <C-R><C-W><space>
     nmap ga :AgAdd!<space>
@@ -95,7 +96,7 @@
 
 
 " Tagbar for navigation by tags using CTags
-  Bundle "git://github.com/majutsushi/tagbar.git"
+  Bundle "http://github.com/majutsushi/tagbar.git"
     let g:tagbar_autofocus = 1
     map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
     map <Leader>. :TagbarToggle<CR>
@@ -104,7 +105,7 @@
 " Ruby focused unit test (wrapped in an if-loaded because it doesn't like
 " being loaded twice)
   if !exists(':RunRubyFocusedUnitTest')
-    Bundle "git://github.com/drewolson/ruby_focused_unit_test_vim.git"
+    Bundle "http://github.com/drewolson/ruby_focused_unit_test_vim.git"
       nmap <Leader>ra :wa<CR> :RunAllRubyTests<CR>
       nmap <Leader>rc :wa<CR> :RunRubyFocusedContext<CR>
       nmap <Leader>rf :wa<CR> :RunRubyFocusedUnitTest<CR>
@@ -113,7 +114,7 @@
 
 
 " Markdown syntax highlighting
-  Bundle "git://github.com/tpope/vim-markdown.git"
+  Bundle "http://github.com/tpope/vim-markdown.git"
     augroup mkd
       autocmd BufNewFile,BufRead *.mkd      set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
       autocmd BufNewFile,BufRead *.md       set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
@@ -122,12 +123,12 @@
 
 
 " Markdown preview to quickly preview markdown files
-  Bundle "git://github.com/maba/vim-markdown-preview.git"
+  Bundle "http://github.com/maba/vim-markdown-preview.git"
   map <buffer> <Leader>mp :Mm<CR>
 
 
 " NERDTree for project drawer
-  Bundle "git://github.com/scrooloose/nerdtree.git"
+  Bundle "http://github.com/scrooloose/nerdtree.git"
     let NERDTreeHijackNetrw = 0
 
     nmap gt :NERDTreeToggle<CR>
@@ -135,7 +136,7 @@
 
 
 " Tabular for aligning text
-  Bundle "git://github.com/godlygeek/tabular.git"
+  Bundle "http://github.com/godlygeek/tabular.git"
     function! CustomTabularPatterns()
       if exists('g:tabular_loaded')
         AddTabularPattern! symbols         / :/l0
@@ -154,12 +155,12 @@
     map <Leader>a :Tabularize<space>
 
 " ZoomWin to fullscreen a particular buffer without losing others
-  Bundle "git://github.com/vim-scripts/ZoomWin.git"
+  Bundle "http://github.com/vim-scripts/ZoomWin.git"
     map <Leader>z :ZoomWin<CR>
 
 
 " Unimpaired for keymaps for quicky manipulating lines and files
-  Bundle "git://github.com/tpope/vim-unimpaired.git"
+  Bundle "http://github.com/tpope/vim-unimpaired.git"
     " Bubble single lines
     nmap <C-Up> [e
     nmap <C-Down> ]e
@@ -170,7 +171,7 @@
 
 
 " Syntastic for catching syntax errors on save
-  Bundle "git://github.com/scrooloose/syntastic.git"
+  Bundle "http://github.com/scrooloose/syntastic.git"
     let g:syntastic_enable_signs=1
     let g:syntastic_quiet_warnings=1
     " syntastic is too slow for haml and sass
@@ -180,8 +181,8 @@
 
 
 " gist-vim for quickly creating gists
-  Bundle "git://github.com/mattn/webapi-vim.git"
-  Bundle "git://github.com/mattn/gist-vim.git"
+  Bundle "http://github.com/mattn/webapi-vim.git"
+  Bundle "http://github.com/mattn/gist-vim.git"
     if has("mac")
       let g:gist_clip_command = 'pbcopy'
     elseif has("unix")
@@ -193,12 +194,12 @@
 
 
 " gundo for awesome undo tree visualization
-  Bundle "git://github.com/sjl/gundo.vim.git"
+  Bundle "http://github.com/sjl/gundo.vim.git"
     map <Leader>h :GundoToggle<CR>
 
 
 " rails.vim, nuff' said
-  Bundle "git://github.com/tpope/vim-rails.git"
+  Bundle "http://github.com/tpope/vim-rails.git"
     map <Leader>oc :Rcontroller<Space>
     map <Leader>ov :Rview<Space>
     map <Leader>om :Rmodel<Space>
@@ -209,7 +210,7 @@
 
 
 " surround for adding surround 'physics'
-  Bundle "git://github.com/tpope/vim-surround.git"
+  Bundle "http://github.com/tpope/vim-surround.git"
     " # to surround with ruby string interpolation
     let g:surround_35 = "#{\r}"
     " - to surround with no-output erb tag
@@ -223,5 +224,5 @@
 
 
 " Jade Highlighting"
-  Bundle "git://github.com/digitaltoad/vim-jade.git"
+  Bundle "http://github.com/digitaltoad/vim-jade.git"
   autocmd BufNewFile,BufRead *.jade set filetype=jade

@@ -4,9 +4,12 @@
 " enable syntax highlighting
   syntax on
 
+" font
+  set guifont=Inconsolata\ Medium\ 10
+
 " default color scheme
   set background=dark
-  color twilight2
+  color vibrantink
 
 " don't wrap long lines
   set nowrap
